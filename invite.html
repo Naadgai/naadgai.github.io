@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Наадгай</title>
+    <link rel="icon" type="image/x-icon" href="https://naadgai.github.io/privacy_files/naadgai.svg">
+    <meta charset="utf-8">
+    <script>
+        function myfunction() {
+            const queryString = window.location.search;
+            console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+            const roomid = urlParams.get('roomid')
+            const action = "Naadgai://room=" + roomid;
+            console.log(action);
+            window.open(action, '_blank');
+        }
+    </script>
+</head>
+
+<body onload="myfunction()">
+    <h1 class="title">
+        Наадгай
+    </h1>
+    <div class="address">
+        Наадгай тоглоомыг доорх товчин дээр дарж татаж авна уу.
+    </div>
+    <p><a href="Naadgai://mylink">Launch</a></p>
+    <p><a href="Naadgai://mylink?parameterasdf">Launch with Parameter</a></p>
+</body>
+
+</html>
