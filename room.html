@@ -15,10 +15,11 @@
             console.log(queryString);
             const urlParams = new URLSearchParams(queryString);
             const roomid = urlParams.get('roomid')
-            console.log(roomid);
+            const action = "Naadgai://room?" + roomid;
+            console.log(action);
             var form = document.createElement("form");
             form.method = "GET";
-            form.action = "Naadgai://room?" + roomid;
+            form.action = action;
             form.target = "_blank";
             document.body.appendChild(form);
             form.submit();
@@ -27,10 +28,14 @@
 </head>
 
 <body">
-    <a class="my-link">link</a>
-    <h1>Наадгай</h1>
+    <h1 class="title">
+        Наадгай
+    </h1>
+    <div class="address">
+        Наадгай тоглоомыг доорх товчин дээр дарж татаж авна уу.
+    </div>
     <p><a href="Naadgai://mylink">Launch</a></p>
     <p><a href="Naadgai://mylink?parameterasdf">Launch with Parameter</a></p>
-</body>
+    </body>
 
 </html>
