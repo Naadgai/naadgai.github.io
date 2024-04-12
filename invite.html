@@ -16,13 +16,11 @@
 
             document.getElementById("demo").innerHTML = action;
 
-            window.setTimeout(function () {
-                var a = window.document.createElement("a");
-                a.target = '_blank';
-                a.href = action;
+            var a = window.document.createElement("a");
+            a.target = '_top';
+            a.href = action;
 
-                a.click();
-            }, 1000);
+            a.click();
         };
 
         function myfunction() {
