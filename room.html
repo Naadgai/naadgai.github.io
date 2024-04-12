@@ -15,7 +15,7 @@
             console.log(queryString);
             const urlParams = new URLSearchParams(queryString);
             const roomid = urlParams.get('roomid')
-            const action = "Naadgai://room?" + roomid;
+            const action = "Naadgai://room=" + roomid;
             console.log(action);
             var form = document.createElement("form");
             form.method = "GET";
