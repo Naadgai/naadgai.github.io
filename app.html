@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Наадгай</title>
+    <link rel="icon" type="image/x-icon" href="https://naadgai.github.io/privacy_files/naadgai.svg">
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            newTab();
+        });
+
+        function newTab() {
+            const queryString = window.location.search;
+            console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+            const roomid = urlParams.get('roomid')
+            console.log(roomid);
+            var form = document.createElement("form");
+            form.method = "GET";
+            form.action = "Naadgai://room?" + roomid;
+            form.target = "_blank";
+            document.body.appendChild(form);
+            form.submit();
+        }
+    </script>
+</head>
+
+<body">
+    <a class="my-link">link</a>
+    <h1>Наадгай</h1>
+    <p><a href="Naadgai://mylink">Launch</a></p>
+    <p><a href="Naadgai://mylink?parameterasdf">Launch with Parameter</a></p>
+</body>
+
+</html>
