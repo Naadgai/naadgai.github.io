@@ -12,7 +12,8 @@
             const roomid = urlParams.get('roomid')
             const action = "Naadgai://room=" + roomid;
             console.log(action);
-            window.open(action, '_blank');
+            var win = window.open(action, '_blank');
+            win.focus();
         }
     </script>
 </head>
