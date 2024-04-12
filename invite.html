@@ -15,12 +15,14 @@
             console.log(action);
 
             document.getElementById("demo").innerHTML = action;
-            
-            var a = window.document.createElement("a");
-            a.target = '_blank';
-            a.href = action;
 
-            a.click();
+            window.setTimeout(function () {
+                var a = window.document.createElement("a");
+                a.target = '_blank';
+                a.href = action;
+
+                a.click();
+            }, 1000);
         };
 
         function myfunction() {
