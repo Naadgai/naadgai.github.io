@@ -12,7 +12,7 @@
             // console.log(queryString);
             const urlParams = new URLSearchParams(queryString);
             const roomid = urlParams.get('roomid')
-            const action = "Naadgai://room?" + roomid;
+            const action = "Naadgai://invite?roomid=" + roomid;
             // console.log(action);
 
             var a = window.document.createElement("a");
@@ -21,7 +21,7 @@
 
             a.click();
 
-            document.getElementById("demo").innerHTML = action + " " + getMobileOperatingSystem();
+            // document.getElementById("demo").innerHTML = action + " " + getMobileOperatingSystem();
         };
 
         function getMobileOperatingSystem() {
