@@ -50,11 +50,14 @@
             }
 
             if (/android/i.test(userAgent)) {
+                document.getElementById("ios").innerHTML = "";
+
                 return "Android";
             }
 
             // iOS detection from: http://stackoverflow.com/a/9039885/177710
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                document.getElementById("android").innerHTML = "";
                 return "iOS";
             }
 
@@ -89,15 +92,16 @@
             </div>
             <span></span>
             <div id="ios" class="address">
-                <a href="https://example.com/ios" target="_blank" rel="noopener noreferrer">
-                    <button>Download for iOS</button>
-                    <img src="http://naadgai.github.io/privacy_files/appstore.png" alt="iOS Icon">
+                <a href="https://apps.apple.com/us/app/naadgai/id6474175184" target="_blank" rel="noopener noreferrer">
+                    <img src="http://naadgai.github.io/privacy_files/appstore.png" alt="iOS Icon" width="250"
+                        height="75">
                 </a>
             </div>
             <div id="android" class="address">
-                <a href="https://example.com/android" target="_blank" rel="noopener noreferrer">
-                    <button>Download for Android</button>
-                    <img src="http://naadgai.github.io/privacy_files/playstore.png" alt="Android Icon">
+                <a href="https://play.google.com/store/apps/details?id=com.muushig.go" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="http://naadgai.github.io/privacy_files/playstore.png" alt="Android Icon" width="250"
+                        height="75">
                 </a>
             </div>
         </div>
