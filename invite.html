@@ -3,25 +3,25 @@
 <head>
     <title>Наадгай</title>
     <link rel="icon" type="image/x-icon" href="https://naadgai.github.io/privacy_files/naadgai.svg">
-    <link rel="image_src" href="https://naadgai.github.io/privacy_files/invite.png">
+    <link rel="image_src" href="https://naadgai.github.io/privacy_files/inviteimg.png">
     <meta charset="utf-8">
     <script>
         function openTab() {
             // Create link in memory
             const queryString = window.location.search;
-            console.log(queryString);
+            // console.log(queryString);
             const urlParams = new URLSearchParams(queryString);
             const roomid = urlParams.get('roomid')
-            const action = "Naadgai://room=" + roomid;
-            console.log(action);
-
-            document.getElementById("demo").innerHTML = action + " " + getMobileOperatingSystem();
+            const action = "Naadgai://room?" + roomid;
+            // console.log(action);
 
             var a = window.document.createElement("a");
             a.target = '_top';
             a.href = action;
 
             a.click();
+
+            document.getElementById("demo").innerHTML = action + " " + getMobileOperatingSystem();
         };
 
         function getMobileOperatingSystem() {
