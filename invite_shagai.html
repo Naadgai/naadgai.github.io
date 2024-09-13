@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
+
+<head>
+    <title>Наадгай</title>
+    <link rel="icon" type="image/x-icon" href="https://naadgai.github.io/privacy_files/naadgai.svg">
+    <link rel="image_src" href="https://naadgai.github.io/privacy_files/inviteimg.png">
+    <meta charset="utf-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Home | NAADGAI</title>
+    <link rel="canonical" href="http://naadgai.github.io/">
+    <meta property="og:url" content="http://naadgai.github.io/invite">
+    <meta property="og:site_name" content="NAADGAI">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="./index_files/main.css">
+    <script>
+        function openTab() {
+            // Create link in memory
+            const queryString = window.location.search;
+            // console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+            const roomid = urlParams.get('roomid')
+            const action = "shagai://invite?roomid=" + roomid;
+            // console.log(action);
+
+            var a = window.document.createElement("a");
+            a.target = '_top';
+            a.href = action;
+
+            a.click();
+            
+            getMobileOperatingSystem();
+            // document.getElementById("demo").innerHTML = action + " " + getMobileOperatingSystem();
+        };
+
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Windows Phone must come first because its UA also contains "Android"
+            if (/windows phone/i.test(userAgent)) {
+                return "Windows Phone";
+            }
+
+            if (/android/i.test(userAgent)) {
+                document.getElementById("ios").innerHTML = "";
+
+                return "Android";
+            }
+
+            // iOS detection from: http://stackoverflow.com/a/9039885/177710
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                document.getElementById("android").innerHTML = "";
+                return "iOS";
+            }
+
+            return "unknown";
+        }
+
+        function myfunction() {
+            const queryString = window.location.search;
+            console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+            const roomid = urlParams.get('roomid')
+            const action = "shagai://room=" + roomid;
+            console.log(action);
+            var win = window.open(action, '_blank');
+            win.focus();
+
+        }
+    </script>
+</head>
+
+<body onload="openTab()">
+    <div class="container">
+        <div class="content">
+            <div class="contacts">
+                <a href="http://naadgai.github.io/contact">Contacts</a>
+            </div>
+            <h1 class="title">
+                НААДГАЙ
+            </h1>
+            <div class="address">
+                Та Шагайн харваа тоглоомыг доорх товчин дээр дарж татаж авна уу.
+            </div>
+            <span></span>
+            <div id="ios" class="address">
+                <a href="https://apps.apple.com/us/app/shagain-harvaa/id6677019195" target="_blank" rel="noopener noreferrer">
+                    <img src="http://naadgai.github.io/privacy_files/appstore.png" alt="iOS Icon" width="250"
+                        height="75">
+                </a>
+            </div>
+            <div id="android" class="address">
+                <a href="https://play.google.com/store/apps/details?id=com.shagain.harvaa" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="http://naadgai.github.io/privacy_files/playstore.png" alt="Android Icon" width="250"
+                        height="75">
+                </a>
+            </div>
+        </div>
+        <footer>
+            <div></div>
+            <div class="copyright">
+                ©<span id="year">2024</span> by NAADGAI
+            </div>
+            <div>
+                <a href="http://naadgai.github.io/privacy" class="privacy">
+                    Terms of use &amp; Privacy policy
+                </a>
+            </div>
+
+        </footer>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+    </div>
+    <div class="mobile-menu_button_container">
+        <div class="mobile-menu_button">
+            <span class="menu-line menu-line-1"></span>
+            <span class="menu-line menu-line-2"></span>
+            <span class="menu-line menu-line-3"></span>
+        </div>
+    </div>
+    <div class="mobile-menu_container">
+        <div class="mobile-menu_links">
+            <a href="http://naadgai.github.io/" class="active-link">Home</a>
+            <a href="http://naadgai.github.io/contact">Contact</a>
+            <a href="http://naadgai.github.io/privacy">Terms of use</a>
+        </div>
+        <div class="mobile-contacts">
+            <a href="http://naadgai.github.io/contact">Contacts</a>
+        </div>
+    </div>
+    <script src="./index_files/jquery.min.js"></script>
+    <script src="./index_files/main.js"></script>
+
+</body>
+
+</html>
