@@ -761,6 +761,7 @@
             const title = urlParams.get('title')
             const qr = urlParams.get('qr')
 
+            document.getElementById("title").innerHTML = title;
             document.getElementById("khanbank").href = "khanbank://q?qPay_QRcode=" + qr;
             document.getElementById("tdbbank").href = "tdbbank://q?qPay_QRcode=" + qr;
             document.getElementById("socialpay-payment").href = "socialpay-payment://q?qPay_QRcode=" + qr;
@@ -1052,7 +1053,6 @@
             </div>
         </div>
         <footer>
-            <div></div>
             <div class="copyright">
                 ©<span id="year">2026</span> by NUUDELCHIN STUDIO LLC
             </div>
