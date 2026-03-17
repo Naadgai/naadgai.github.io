@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
+
+<head>
+    <title>Aduuchin Game</title>
+    <link rel="icon" type="image/x-icon" href="https://nuudelchin.studio/privacy_files/naadgai.svg">
+    <link rel="image_src" href="https://nuudelchin.studio/privacy_files/aduuchin.png">
+    <meta charset="utf-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Төлбөр</title>
+    <link rel="canonical" href="http://nuudelchin.studio/">
+    <meta property="og:url" content="http://nuudelchin.studio/payment">
+    <meta property="og:site_name" content="Нүүдэлчин студи">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="./index_files/main.css">
+    <script>
+        function openTab() {
+            // Create link in memory
+            const queryString = window.location.search;
+            // console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+            const title = urlParams.get('title')
+            const url = urlParams.get('url')
+
+            document.getElementById("title").innerHTML = title;
+            document.getElementById("qpay").href = url;
+
+            // getMobileOperatingSystem();
+            // document.getElementById("demo").innerHTML = action + " " + getMobileOperatingSystem();
+        };
+
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Windows Phone must come first because its UA also contains "Android"
+            if (/windows phone/i.test(userAgent)) {
+                return "Windows Phone";
+            }
+
+            if (/android/i.test(userAgent)) {
+                document.getElementById("ios").innerHTML = "";
+
+                return "Android";
+            }
+
+            // iOS detection from: http://stackoverflow.com/a/9039885/177710
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                document.getElementById("android").innerHTML = "";
+                return "iOS";
+            }
+
+            return "unknown";
+        }
+
+        function myfunction() {
+            const queryString = window.location.search;
+            console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+            const roomid = urlParams.get('roomid')
+            const action = "Naadgai://room=" + roomid;
+            console.log(action);
+            var win = window.open(action, '_blank');
+            win.focus();
+
+        }
+    </script>
+</head>
+
+<body onload="openTab()">
+    <div class="container">
+        <div class="content">
+            <div class="contacts">
+                <a href="http://nuudelchin.studio/contact">Contacts</a>
+            </div>
+            <h1 class="title">
+                ADUUCHIN GAME
+            </h1>
+            <h1 id="title" class="address">
+                Төлбөр
+            </h1>
+            <span></span>
+            <a id="qpay" href="" target="_blank" rel="noopener">
+                <img src="http://nuudelchin.studio/privacy_files/appstore.png" alt="iOS Icon" width="250" height="75">
+            </a>
+        </div>
+        <footer>
+            <div></div>
+            <div class="copyright">
+                ©<span id="year">2026</span> by NUUDELCHIN STUDIO LLC
+            </div>
+            <div>
+                <a href="http://nuudelchin.studio/privacy" class="privacy">
+                    Terms of use &amp; Privacy policy
+                </a>
+            </div>
+
+        </footer>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+    </div>
+    <div class="mobile-menu_button_container">
+        <div class="mobile-menu_button">
+            <span class="menu-line menu-line-1"></span>
+            <span class="menu-line menu-line-2"></span>
+            <span class="menu-line menu-line-3"></span>
+        </div>
+    </div>
+    <div class="mobile-menu_container">
+        <div class="mobile-menu_links">
+            <a href="http://nuudelchin.studio/" class="active-link">Home</a>
+            <a href="http://nuudelchin.studio/contact">Contact</a>
+            <a href="http://nuudelchin.studio/privacy">Terms of use</a>
+        </div>
+        <div class="mobile-contacts">
+            <a href="http://nuudelchin.studio/contact">Contacts</a>
+        </div>
+    </div>
+    <script src="./index_files/jquery.min.js"></script>
+    <script src="./index_files/main.js"></script>
+
+</body>
+
+</html>
