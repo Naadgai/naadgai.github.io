@@ -30,10 +30,10 @@
             const urlParams = new URLSearchParams(queryString);
             const title = urlParams.get('title')
             const url = urlParams.get('url')
+            // qpay templayer window.open('https://s.qpay.mn/vvjsndGo35','_blank')
+            document.getElementById("qpay").onclick = () => window.open(url, "_blank");
 
             document.getElementById("title").innerHTML = title;
-            document.getElementById("qpay").href = url;
-
             // getMobileOperatingSystem();
             // document.getElementById("demo").innerHTML = action + " " + getMobileOperatingSystem();
         };
@@ -88,9 +88,9 @@
                 Төлбөр
             </h1>
             <span></span>
-            <a id="qpay" href="" target="_blank" rel="noopener">
+            <button id="qpay" href="" target="_blank" rel="noopener noreferrer">
                 <img src="http://nuudelchin.studio/privacy_files/appstore.png" alt="iOS Icon" width="250" height="75">
-            </a>
+            </button>
         </div>
         <footer>
             <div></div>
