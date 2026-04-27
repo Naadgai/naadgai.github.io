@@ -534,7 +534,7 @@ section .section__body h1 {
 }
 
 @media (max-width: 768px) {
-  
+
     section .section__body h1 {
         margin: 30px 0;
     }
@@ -566,6 +566,39 @@ section .section__body h1 {
     #contact .contact__infoblock h3,
     #contact .contact__infoblock h3:first-child {
         margin: 20px 0 0px 0;
+    }
+
+    .gamecard {
+        margin: 6px 0;
+        padding: 4px 0;
+    }
+
+    .gamecard .gamecard__body .gamecard__body-main {
+        padding: 8px 6px 8px 6px;
+    }
+
+    .gamecard .gamecard__thumb img {
+        border-radius: 12px;
+    }
+
+    .gamecard .gamecard__body .gamecard__body-main h3 {
+        font-size: 10px;
+        margin: 6px 0 4px 0;
+        line-height: 1.2;
+    }
+
+    .gamecard .gamecard__body .gamecard__body-main .gamelink img {
+        width: 18px;
+        margin: 2px 2px;
+    }
+
+    .gamecard .gamecard__shadow {
+        top: 4px;
+        left: 4px;
+    }
+
+    .sub_text {
+        display: none;
     }
 }
 
