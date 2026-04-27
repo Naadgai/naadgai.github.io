@@ -246,7 +246,7 @@ section .section__body h1 {
 }
 
 .gamecard .gamecard__body .gamecard__body-main .gamelink img {
-    width: 30px;
+    width: 50px;
     margin: 5px 5px 5px 5px;
 }
 
@@ -588,7 +588,7 @@ section .section__body h1 {
     }
 
     .gamecard .gamecard__body .gamecard__body-main .gamelink img {
-        width: 18px;
+        width: 32px;
         margin: 2px 2px;
     }
 
